@@ -1,0 +1,46 @@
+<html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>
+<style>
+mainscreentitle {text-align:center;font-size:40px;} //ID Text - Name
+div.main {position:relative; left:25%;} //Main - Screen Class
+//div.thumbnail1 {position:relative; left:2.5%;) //Thumb 1
+//div.thumbnail2 {position:relative; left:35%;) //Thumb 2
+//div.thumbnail3 {position:relative; left:67.5%;) //Thumb 3
+
+</style>
+<script>
+<script>
+function stream(id, embed)
+{
+this.id=id;
+this.embed=embed;
+}
+</script>
+
+<script>
+dotahunter=new stream("DotAHunter",'<object type="application/x-shockwave-flash" height="378" width="620" id="live_embed_player_flash" data="http://www.twitch.tv/widgets/live_embed_player.swf?channel=dotahunter" bgcolor="#000000"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf" /><param name="flashvars" value="hostname=www.twitch.tv&channel=dotahunter&auto_play=true&start_volume=25" /></object><a href="http://www.twitch.tv/dotahunter" class="trk" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline; text-align:center;">Watch live video from dotahunter on www.twitch.tv</a>');
+dirtnaptv=new stream("Dirt Nap TV",'<object type="application/x-shockwave-flash" height="378" width="620" id="live_embed_player_flash" data="http://www.twitch.tv/widgets/live_embed_player.swf?channel=dirtnaptv" bgcolor="#000000"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf" /><param name="flashvars" value="hostname=www.twitch.tv&channel=dirtnaptv&auto_play=true&start_volume=25" /></object><a href="http://www.twitch.tv/dirtnaptv" class="trk" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline; text-align:center;">Watch live video from dirtnaptv on www.twitch.tv</a>');
+</script>
+
+<script>
+$(document).ready(function(){
+  $("dotahunterdiv").click(function(){
+		$("#mainscreen").html(dotahunter.embed);
+		$("#mainscreentitle").text(dotahunter.id);
+	});
+	$("dirtnaptvdiv").click(function(){
+		$("#mainscreen").html(dirtnaptv.embed);
+		$("#mainscreentitle").text(dirtnaptv.id);
+	});
+});
+</head>
+
+<body>
+<h1 id="mainscreentitle"> Dirt Nap TV </h1>
+<div id="mainscreen" class="main"><object type="application/x-shockwave-flash" height="378" width="620" id="live_embed_player_flash" data="http://www.twitch.tv/widgets/live_embed_player.swf?channel=dirtnaptv" bgcolor="#000000"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="movie" value="http://www.twitch.tv/widgets/live_embed_player.swf" /><param name="flashvars" value="hostname=www.twitch.tv&channel=dirtnaptv&auto_play=true&start_volume=25" /></object><a href="http://www.twitch.tv/dirtnaptv" class="trk" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline; text-align:center;">Watch live video from dirtnaptv on www.twitch.tv</a></div?>
+
+//<div id="dotahunterdiv" class="thumbnail1">
+//<p id="dotahuntertitle">
+
