@@ -8,9 +8,7 @@ div.main {position:relative; left:25%;} //Main - Screen Class
 //div.thumbnail1 {position:relative; left:2.5%;) //Thumb 1
 //div.thumbnail2 {position:relative; left:35%;) //Thumb 2
 //div.thumbnail3 {position:relative; left:67.5%;) //Thumb 3
-
 </style>
-<script>
 <script>
 function stream(id, embed)
 {
@@ -26,7 +24,7 @@ dirtnaptv=new stream("Dirt Nap TV",'<object type="application/x-shockwave-flash"
 
 <script>
 $(document).ready(function(){
-  $("dotahunterdiv").click(function(){
+	$("dotahunterdiv").click(function(){
 		$("#mainscreen").html(dotahunter.embed);
 		$("#mainscreentitle").text(dotahunter.id);
 	});
@@ -35,6 +33,7 @@ $(document).ready(function(){
 		$("#mainscreentitle").text(dirtnaptv.id);
 	});
 });
+</script>
 </head>
 
 <body>
